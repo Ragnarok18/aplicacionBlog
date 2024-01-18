@@ -1,0 +1,10 @@
+rails g scaffold User first_name:string last_name:string
+
+
+rails g migration AddUseridToPosts user:references
+
+
+rails g migration AddUseridToComments user:references
+
+
+rake db:migrate
