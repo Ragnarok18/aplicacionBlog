@@ -20,5 +20,8 @@
 #  user_id  (user_id => users.id)
 #
 class Comment < ApplicationRecord
+  belongs_to :post
   belongs_to :user
+  validates_presence_of :post_id
+  validates_presence_of :body
 end
